@@ -3,6 +3,7 @@
     namespace App\Controller;
 
     use App\Entity\Section;
+    use App\Entity\UnderSection;
     use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
     class HomeController extends Controller {
@@ -19,9 +20,16 @@
             $sections = $sectionRepository
                 -> findAll();
 
+            $underSectionRepository = $qb
+                -> getRepository(UnderSection::class);
+
+            $underSections = $underSectionRepository
+                -> findAll();
+
             return $this -> render('index.html.twig', array(
 
-                'sections' => $sections
+                'sections' => $sections,
+                'underSections' => $underSections
 
             ));
 

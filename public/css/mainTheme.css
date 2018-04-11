@@ -2,12 +2,13 @@ body {
 
     margin: 0;
     padding: 0;
+    width: 100%;
     font-family: sans-serif;
     background-color: whitesmoke;
 
 }
 
-h1 {
+h1, h2, p {
 
     margin: 0;
     padding: 0;
@@ -41,6 +42,25 @@ header {
     color: white;
     padding: 5px 10px;
     font-size: 15px;
+
+}
+
+.underSection {
+
+    padding: 10px;
+    border-bottom: 1px solid black;
+
+}
+
+.underSection div {
+
+    display: inline-block;
+
+}
+
+.sectionDetails {
+
+    float: right;
 
 }
 

@@ -5,5 +5,18 @@
 {% block body %}
     {% for section in sections %}
         <section class="section">{{ section.title }}</section>
+        {% for underSection in underSections %}
+            {% if section.id == underSection.section.id %}
+                <article class="underSection">
+                    <div>
+                        <h2>{{ underSection.title }}</h2>
+                        <span>{{ underSection.description }}</span>
+                    </div>
+                    <div class="sectionDetails">
+                        <p>{{ underSection.author }}</p>
+                    </div>
+                </article>
+            {% endif %}
+        {% endfor %}
     {% endfor %}
 {% endblock %}
