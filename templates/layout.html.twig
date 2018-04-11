@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}Forum{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="/css/mainTheme.css">
+    </head>
+    <body>
+        <div id="">
+            <header>
+                <div id="title">
+                    <h1>Forum</h1>
+                    <span>Le forum qui surclasse tous les autres !</span>
+                </div>
+            </header>
+            <div id="main">
+                {% block body %}
+                {% endblock %}
+            </div>
+            <footer>
+                @ Copyright 2018 - Mickaël Losiewicz / Emakina
+            </footer>
+        </div>
+    </body>
+</html>
