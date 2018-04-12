@@ -15,6 +15,12 @@ h1, h2, p {
 
 }
 
+a {
+
+    text-decoration: none;
+
+}
+
 header {
 
     background-color: #54575B;
@@ -52,6 +58,12 @@ header {
 
 }
 
+.underSection a {
+
+    color: black;
+
+}
+
 .underSection div {
 
     display: inline-block;
@@ -61,6 +73,9 @@ header {
 .sectionDetails {
 
     float: right;
+    padding-right: 10px;
+    padding-top: 5px;
+    text-align: center;
 
 }
 
