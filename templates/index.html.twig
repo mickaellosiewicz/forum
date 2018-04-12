@@ -9,11 +9,12 @@
             {% if section.id == underSection.section.id %}
                 <article class="underSection">
                     <div>
-                        <h2>{{ underSection.title }}</h2>
+                        <a href="/{{ underSection.id }}"><h2>{{ underSection.title }}</h2></a>
                         <span>{{ underSection.description }}</span>
                     </div>
                     <div class="sectionDetails">
                         <p>{{ underSection.author }}</p>
+                        {{ underSection.lastUpdate|date('d/m/Y') }}
                     </div>
                 </article>
             {% endif %}

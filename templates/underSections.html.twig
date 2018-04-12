@@ -1,0 +1,33 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}
+    {{ parent() }} -
+    {% if underSection != null %}
+        {{ underSection.title }}
+    {% else %}
+        404 Section introuvable
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    {% if underSection != null %}
+        <section class="section">{{ underSection.title }}</section>
+        {% if articles|length != 0 %}
+            {% for article in articles %}
+                <article class="underSection">
+                    <div>
+                        <h2>{{ article.title }}</h2>
+                        <span>{{ article.description }}</span>
+                    </div>
+                    <div class="sectionDetails">
+                        <p>{{ article.author }}</p>
+                    </div>
+                </article>
+            {% endfor %}
+        {% else %}
+            <p class="nores">Aucun article disponible pour cette section.</p>
+        {% endif %}
+    {% else %}
+        <p class="nores">La section demandée n'est pas disponible ou n'existe pas.</p>
+    {% endif %}
+{% endblock %}
