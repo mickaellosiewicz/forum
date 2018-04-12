@@ -1,3 +1,7 @@
 index:
     path: /
     controller: App\Controller\HomeController::index
+
+underSection:
+    path: /{id}
+    controller: App\Controller\UnderSectionController:showSections

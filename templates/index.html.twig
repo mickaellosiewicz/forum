@@ -9,7 +9,7 @@
             {% if section.id == underSection.section.id %}
                 <article class="underSection">
                     <div>
-                        <h2>{{ underSection.title }}</h2>
+                        <a href="/{{ underSection.id }}"><h2>{{ underSection.title }}</h2></a>
                         <span>{{ underSection.description }}</span>
                     </div>
                     <div class="sectionDetails">

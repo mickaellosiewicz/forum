@@ -41,7 +41,7 @@ header {
     background-color: black;
     color: white;
     padding: 5px 10px;
-    font-size: 15px;
+    font-size: 26px;
 
 }
 
@@ -61,6 +61,13 @@ header {
 .sectionDetails {
 
     float: right;
+
+}
+
+.nores {
+
+    text-align: center;
+    padding: 10px;
 
 }
 

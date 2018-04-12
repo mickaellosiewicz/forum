@@ -5,9 +5,9 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\UnderSectionRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
  */
-class UnderSection
+class Article
 {
     /**
      * @ORM\Id()
@@ -37,10 +37,10 @@ class UnderSection
     private $lastUpdate;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Section")
+     * @ORM\ManyToOne(targetEntity="App\Entity\UnderSection")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $section;
+    private $underSection;
 
     public function getId()
     {
@@ -95,20 +95,15 @@ class UnderSection
         return $this;
     }
 
-    public function getSection(): ?Section
+    public function getUnderSection(): ?UnderSection
     {
-        return $this->section;
+        return $this->underSection;
     }
 
-    public function setSection(?Section $section): self
+    public function setUnderSection(?UnderSection $underSection): self
     {
-        $this->section = $section;
+        $this->underSection = $underSection;
 
         return $this;
-    }
-
-    public function __toString()
-    {
-        return $this -> getTitle();
     }
 }
